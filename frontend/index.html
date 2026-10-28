@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover music according to your mood with MoodMix.">
+  <title>MoodMix | Music for Your Mood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="/">Mood<span>Mix</span></a>
+    <span class="nav-label">Music that feels like you</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">YOUR MOOD. YOUR MUSIC.</p>
+      <h1>How are you <span>feeling today?</span></h1>
+      <p class="subtitle">
+        Tell us how you feel, and we'll find music to match your mood.
+      </p>
+    </section>
+
+    <section class="mood-card">
+      <label for="moodInput">Describe your mood</label>
+
+      <textarea
+        id="moodInput"
+        maxlength="500"
+        placeholder="Example: I'm feeling happy and excited today..."
+      ></textarea>
+
+      <div class="emoji-heading">Or choose an emoji</div>
+
+      <div class="emoji-list">
+        <button type="button" class="emoji-btn" data-emoji="😊" aria-label="Happy">😊</button>
+        <button type="button" class="emoji-btn" data-emoji="😢" aria-label="Sad">😢</button>
+        <button type="button" class="emoji-btn" data-emoji="😌" aria-label="Calm">😌</button>
+        <button type="button" class="emoji-btn" data-emoji="⚡" aria-label="Energetic">⚡</button>
+        <button type="button" class="emoji-btn" data-emoji="😡" aria-label="Angry">😡</button>
+      </div>
+
+      <button type="button" id="analyseBtn" class="primary-btn">
+        Find My Music <span>→</span>
+      </button>
+
+      <p id="statusMessage" class="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="results" class="results" hidden>
+      <div class="result-heading">
+        <p class="eyebrow">YOUR PERSONAL MUSIC PICKS</p>
+        <h2>Your mood is <span id="moodName">Calm</span></h2>
+        <p id="moodExplanation"></p>
+        <p id="recommendationSource" class="source"></p>
+      </div>
+
+      <div id="songList" class="song-grid"></div>
+
+      <button type="button" id="tryAgainBtn" class="secondary-btn">
+        Analyse Another Mood
+      </button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ♪ and a little bit of feeling.</p>
+    <p>© 2026 MoodMix</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
